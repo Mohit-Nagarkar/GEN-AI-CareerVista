@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // users collection - only allow owner read/write
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    // public collections (if any) - read only
+    match /public/{doc} {
+      allow read: if true;
+    }
+  }
+}

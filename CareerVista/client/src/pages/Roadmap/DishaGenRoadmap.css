@@ -1,0 +1,334 @@
+/* DishaGenRoadmap.css */
+.disagen-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  position: relative;
+  min-height: 500px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #3a7bd5;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #666;
+  font-size: 18px;
+}
+
+.topic-input, .quiz-container, .results-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.topic-input h2, .quiz-container h2, .results-container h2 {
+  color: #3a7bd5;
+  margin-bottom: 20px;
+}
+
+.topic-form {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.topic-input-field {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.topic-input-field:focus {
+  outline: none;
+  border-color: #3a7bd5;
+}
+
+.preset-topics p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.topic-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topic-btn {
+  padding: 10px 20px;
+  background: #f0f5ff;
+  border: 1px solid #d0d9ff;
+  border-radius: 8px;
+  color: #3a7bd5;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.topic-btn:hover {
+  background: #e0ebff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group select, .form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #3a7bd5;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2c5fb0;
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+  background: #e9ecef;
+}
+
+.quiz-questions {
+  margin-bottom: 30px;
+}
+
+.question-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.question-card h3 {
+  margin-bottom: 15px;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option input {
+  margin-right: 10px;
+  width: auto;
+}
+
+.option label {
+  cursor: pointer;
+}
+
+.score-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.weak-areas {
+  margin-top: 15px;
+}
+
+.weak-areas ul {
+  padding-left: 20px;
+}
+
+.weak-areas li {
+  margin-bottom: 5px;
+}
+
+.roadmap-steps {
+  display: grid;
+  gap: 15px;
+}
+
+.roadmap-step {
+  display: flex;
+  align-items: flex-start;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.step-number {
+  background: #3a7bd5;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.step-content {
+  padding-top: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c62828;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-content {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.loading-subtext {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3a7bd5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .disagen-container {
+    padding: 10px;
+  }
+  
+  .topic-input, .quiz-container, .results-container {
+    padding: 20px;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .roadmap-step {
+    flex-direction: column;
+  }
+  
+  .step-number {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Add these styles to your existing CSS file */
+.answer-required {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.question-card {
+  border-left: 4px solid #3a7bd5;
+}
+
+.option {
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.option:hover {
+  background-color: #f0f5ff;
+}
+
+.option input[type="radio"]:checked + label {
+  font-weight: bold;
+  color: #3a7bd5;
+}

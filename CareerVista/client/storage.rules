@@ -1,0 +1,13 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /resumes/{userId}/{allPaths=**} {
+      // only allow authenticated user to write and read their own resume
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    // public assets (e.g. site images) - adjust as needed
+    match /public/{allPaths=**} {
+      allow read: if true;
+    }
+  }
+}
